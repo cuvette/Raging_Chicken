@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour {
 	Rigidbody playerRigidbody;
 	float camRaylength = 100f;
 	Vector3 movement;
+	int floorMask;
 
 	void Awake()
 	{
 		playerRigidbody = GetComponent<Rigidbody>();
+		floorMask = LayerMask.GetMask ("Floor");
 	}
 
 	void FixedUpdate()
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour {
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit;
 
-		if (Physics.Raycast (camRay, out floorHit, camRaylength))
+		if (Physics.Raycast (camRay, out floorHit, camRaylength, floorMask))
 		{
 			Vector3 playertoMouse = floorHit.point - transform.position;
 
