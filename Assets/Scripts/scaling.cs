@@ -18,6 +18,19 @@ public class scaling : MonoBehaviour {
 		touched = new List<GameObject>();
 	}
 
+	
+	void Update ()
+	{
+		if (Input.GetKey (KeyCode.Mouse0) && cone.transform.localScale.x <= maxScale)
+			cone.transform.localScale += new Vector3 (scaleValue, scaleValue, scaleValue);
+		else
+			cone.transform.localScale = new Vector3 (0, 0, 0);
+		if (Input.GetMouseButtonUp (0)||cone.transform.localScale.x >= maxScale)
+			Debug.Log ("Fire");
+			Fire();
+			
+		}
+	
 	void OnTriggerEnter(Collider other){
 		
 		if(other.gameObject.tag == "Enemy")
@@ -25,7 +38,7 @@ public class scaling : MonoBehaviour {
 			touched.Add(other.gameObject);
 		}
 	}
-
+	
 	void OnTriggerExit(Collider other)
 	{
 		if(other.gameObject.tag == "Enemy")
@@ -39,20 +52,8 @@ public class scaling : MonoBehaviour {
 		{
 			if(touched[i]==null)
 				continue;
-				touched[i].GetComponent<Rigidbody>().AddForce(transform.forward * power);
-			}
+			touched[i].GetComponent<Rigidbody>().AddForce(transform.forward * power);
 		}
-	
-	void Update ()
-	{
-		if (Input.GetKey (KeyCode.Mouse0) && cone.transform.localScale.x <= maxScale)
-			cone.transform.localScale += new Vector3 (scaleValue, scaleValue, scaleValue);
-		else
-			cone.transform.localScale = new Vector3 (0, 0, 0);
-		if (Input.GetMouseButtonUp (0)||cone.transform.localScale.x >= maxScale)
-			Debug.Log ("Fire");
-			Fire();
-			
-		}
+	}
 	
 }
