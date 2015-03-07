@@ -8,11 +8,14 @@ public class PlayerMovement : MonoBehaviour {
 	float camRaylength = 100f;
 	Vector3 movement;
 	int floorMask;
+	Animator anim;
 
 	void Awake()
 	{
 		playerRigidbody = GetComponent<Rigidbody>();
 		floorMask = LayerMask.GetMask ("Floor");
+		anim = GetComponent<Animator> ();
+	
 	}
 
 	void FixedUpdate()
@@ -22,7 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		Move (h, v);
 		Turning ();
-		//Animating()
+		Animating (h,v);
 
 	}
 	void Move(float h, float v)
@@ -37,8 +40,7 @@ public class PlayerMovement : MonoBehaviour {
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit;
 
-		if (Physics.Raycast (camRay, out floorHit, camRaylength, floorMask))
-		{
+		if (Physics.Raycast (camRay, out floorHit, camRaylength, floorMask)) {
 			Vector3 playertoMouse = floorHit.point - transform.position;
 
 			playertoMouse.y = 0f;
@@ -48,4 +50,9 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-}
+	void Animating(float h, float v)
+		{
+			bool run = h!=0f || v!=0f;
+			anim.SetBool("IsRunning",run);
+		}
+	}
