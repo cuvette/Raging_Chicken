@@ -4,15 +4,15 @@ using System.Collections.Generic;
 
 public class scaling : MonoBehaviour {
 
-	GameObject cone;
+
 	public float scaleValue = 0.2f;
 	public float maxScale = 20f;
 	private List<GameObject> touched;
 	public float power = 100f;
+	
+	GameObject cone;	
 
-
-
-	void Start ()
+	void Awake ()
 	{
 		cone = GameObject.Find ("cone");
 		touched = new List<GameObject>();
@@ -46,14 +46,16 @@ public class scaling : MonoBehaviour {
 			touched.Remove(other.gameObject);
 		}
 	}
-	public void Fire()
+	void Fire()
 	{
+
 		for(int i=0; i<touched.Count; i++)
 		{
 			if(touched[i]==null)
 				continue;
 			touched[i].GetComponent<Rigidbody>().AddForce(transform.forward * power);
 		}
+
 	}
 	
 }

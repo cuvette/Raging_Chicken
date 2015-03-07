@@ -4,17 +4,20 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	public float speed = 6f;
-	Rigidbody playerRigidbody;
 	float camRaylength = 100f;
 	Vector3 movement;
 	int floorMask;
-	Animator anim;
 
+	Rigidbody playerRigidbody;
+	Animator anim;
+	AudioSource playerAudio;
+	
 	void Awake()
 	{
 		playerRigidbody = GetComponent<Rigidbody>();
 		floorMask = LayerMask.GetMask ("Floor");
 		anim = GetComponent<Animator> ();
+		playerAudio = GetComponent<AudioSource> ();
 	
 	}
 
@@ -33,6 +36,10 @@ public class PlayerMovement : MonoBehaviour {
 		movement.Set (h, 0f, v);
 		movement = movement.normalized * speed * Time.fixedDeltaTime;
 		playerRigidbody.MovePosition (transform.position + movement);
+		if (Input.GetMouseButtonDown (0))
+			playerAudio.Play ();
+		if (Input.GetMouseButtonUp (0))
+			playerAudio.Stop ();
 
 	}
 	void Turning()
@@ -55,4 +62,5 @@ public class PlayerMovement : MonoBehaviour {
 			bool run = h!=0f || v!=0f;
 			anim.SetBool("IsRunning",run);
 		}
-	}
+
+}
