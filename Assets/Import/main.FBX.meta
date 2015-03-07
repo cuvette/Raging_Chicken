@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: f27c7add09b21d2439b096e71f21b4b5
+timeCreated: 1425731038
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bone-majeur1
+    100002: bone_annulaire1
+    100004: bone_annulaire2
+    100006: bone_auriculaire1
+    100008: bone_auriculaire2
+    100010: bone_extmain
+    100012: bone_index1
+    100014: bone_index2
+    100016: bone_interieur
+    100018: bone_majeur2
+    100020: bone_pouce1
+    100022: bone_pouce2
+    100024: bone_start_annulaire
+    100026: bone_start_auriculaire
+    100028: bone_start_index
+    100030: bone_start_majeur
+    100032: bone_start_pouce
+    100034: endbone_annulaire
+    100036: endbone_auriculaire
+    100038: endbone_index
+    100040: endbone_majeur
+    100042: endbone_pouce
+    100044: //RootNode
+    100046: model
+    400000: bone-majeur1
+    400002: bone_annulaire1
+    400004: bone_annulaire2
+    400006: bone_auriculaire1
+    400008: bone_auriculaire2
+    400010: bone_extmain
+    400012: bone_index1
+    400014: bone_index2
+    400016: bone_interieur
+    400018: bone_majeur2
+    400020: bone_pouce1
+    400022: bone_pouce2
+    400024: bone_start_annulaire
+    400026: bone_start_auriculaire
+    400028: bone_start_index
+    400030: bone_start_majeur
+    400032: bone_start_pouce
+    400034: endbone_annulaire
+    400036: endbone_auriculaire
+    400038: endbone_index
+    400040: endbone_majeur
+    400042: endbone_pouce
+    400044: //RootNode
+    400046: model
+    4300000: model
+    7400000: running
+    9500000: //RootNode
+    13700000: model
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: running
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bone_extmain
+        weight: 1
+      - path: bone_extmain/bone_interieur
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_annulaire
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_annulaire/bone_annulaire1
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_annulaire/bone_annulaire1/bone_annulaire2
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_annulaire/bone_annulaire1/bone_annulaire2/endbone_annulaire
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_auriculaire
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_auriculaire/bone_auriculaire1
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_auriculaire/bone_auriculaire1/bone_auriculaire2
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_auriculaire/bone_auriculaire1/bone_auriculaire2/endbone_auriculaire
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_index
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_index/bone_index1
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_index/bone_index1/bone_index2
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_index/bone_index1/bone_index2/endbone_index
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_majeur
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_majeur/bone-majeur1
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_majeur/bone-majeur1/bone_majeur2
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_majeur/bone-majeur1/bone_majeur2/endbone_majeur
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_pouce
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_pouce/bone_pouce1
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_pouce/bone_pouce1/bone_pouce2
+        weight: 1
+      - path: bone_extmain/bone_interieur/bone_start_pouce/bone_pouce1/bone_pouce2/endbone_pouce
+        weight: 1
+      - path: model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
