@@ -64,6 +64,7 @@ $RECYCLE.BIN/
 *.cab
 *.msi
 *.msm
+<<<<<<< HEAD
 *.msp
 ProjectSettings/ClusterInputManager.asset
 
@@ -76,3 +77,6 @@ ProjectSettings/ProjectVersion.txt
 ProjectSettings/UnityAdsSettings.asset
 
 ProjectSettings/UnityConnectSettings.asset
+=======
+*.msp
+>>>>>>> parent of c65cad4... changement couleur disco

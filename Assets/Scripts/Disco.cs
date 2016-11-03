@@ -9,7 +9,7 @@ public class Disco : MonoBehaviour {
 
 	void Start()
 	{
-		colours[0] = Color.black;
+		colours[0] = Color.blue;
 		colours[1] = Color.green;
 		colours[2] = Color.red;
 		colours [3] = Color.white;
